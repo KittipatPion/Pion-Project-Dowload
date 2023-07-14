@@ -1,10 +1,116 @@
 ﻿@page
+@using WebApplication1.Pages;
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
-}
+    ViewData["Title"] = "WMX Download";
+    <style>
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        .center-GSC {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+        }
+
+        .center-Download {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+
+        .mobile-container {
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            background-color: white;
+            border-radius: 30px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+
+        .topnav a {
+            float: left;
+            color: white;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: #04AA6D;
+        }
+
+        .topnavside {
+            overflow: hidden;
+            background-color: #075;
+            position: relative;
+        }
+
+        .topnavside a {
+            float: left;
+            color: white;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnavside a:hover {
+            background-color: #ddd;
+            color: #04AA6D;
+        }
+
+    </style>
+}
+<div class="mobile-container">
+    <div class="topnavside">
+        <a class="" asp-page="/index" class="active"> WMX Tablet </a>
+          <a class="" asp-page="/WMXUAT"> WMX Tablet (UAT) </a>
+        <a class="" asp-page="/PC"> WMX PC </a>
+    </div>
 </div>
+
+<div class="container text-center">
+    <h1 class="display-4" style="text-shadow: 2px 2px 5px gray; font-weight:bold;">WMX Tablet Download</h1>
+    <div class="flex-column">
+        <div class="row">
+            <div class="col-sm-5 col-md-6 col-lg-4">
+                <img class="center-fit" src="~/images/WMX Tablet.png" class="img" alt="Download WMX Tablet" />
+                <div class="align-self-center">
+                    <h1 style="color:black; text-size-adjust: 80%; font-weight:normal;">WMX Tablet </h1>
+                </div>
+                <div class="align-self-center">
+                    <h6 style="color:black; text-size-adjust: 50%;">Version 3.0.0.38</h6>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-4 col-lg-2 align-self-center">
+                <a href="~/Tablet/APK/WMX/WMX.apk">
+                    <img class="center-Download" src="~/images/Tablet Download.png" class="img" alt="Download WMX Tablet" />
+                </a>
+            </div>
+            <div class="col-sm-5 col-md-6 col-lg-4">
+                <img class="center-GSC" src="~/images/WMX HH.png" class="img" alt="Download WMX Tablet" />
+                <div class="align-self-center">
+                    <h1 style="color:black; text-size-adjust: 80%; font-weight:normal;">WMX For GSC </h1>
+                </div>
+                <div class="align-self-center">
+                    <h6 style="color:black; text-size-adjust: 50%;">Version 3.0.0.13</h6>
+                </div>
+            </div>
+            <div class="col-sm-5 col-md-4 col-lg-2 align-self-center">
+                <a href="~/Tablet/APK/WMX/WMX-GSC.apk">
+                    <img class="center-Download" src="~/images/GSC Downlaod.png" class="img" alt="Download WMX Tablet" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
