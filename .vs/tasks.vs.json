@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-google-play-badge",
+      "appliesTo": "WebApplication1/wwwroot/images/google-play-badge.png",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-app-release",
+      "appliesTo": "WebApplication1/wwwroot/app/app-release.apk",
+      "type": "launch"
+    }
+  ]
+}
